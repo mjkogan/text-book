@@ -1,0 +1,356 @@
+<html>
+	<head>
+		<title>Text Book - Time</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<section class="layout">
+			
+		  <header>
+			 <h1><a href="index.html">Text Book</a></h1>
+		  </header>
+		  
+		  <nav>
+			  <ul>
+			    <li><a href="spr.html">pg. 1: one word at a</a>
+					<div class="hover-box">A serial/parallel reading of <i>Wind is Blowing</i> by Chika Sagawa. Use any of the arrow keys to move through the text.</div>
+				</li>
+			    <li><a href="clock.html">pg. 2: time</a>
+					<div class="hover-box">One second poems, presented according to the hours, minutes, and seconds of the current time.</div>
+				</li>
+				<li><a href="one.html">pg. 3: blackbirds</a>
+					<div class="hover-box">A hypertext presentation of <i>Thirteen Ways of Looking at a Blackbird</i> by Wallace Stevens. Follow the links to move through the text.</div>
+				</li>
+				<li><a href="type.html">pg. 4: type</a>
+					<div class="hover-box">Type any five letters to generate a five-word sentence. Press the 'Enter' key to clear the display.</div>
+				<li> 
+			  </ul>
+		  </nav>
+		  
+		  <div class="body_content">
+		  	<table id="clock" style="width: 100%; height: 100%;">
+				<tr>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+				</tr>
+				<tr>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+				</tr>
+				<tr>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+				</tr>
+				<tr>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+				</tr>
+				<tr>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+				</tr>
+				<tr>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+					<td style="width: 10%; height: 16.66%"></td>
+				</tr>
+			</table>
+		  </div>
+		  
+		  <footer>
+			  <p>by<br>Matthew Kogan</p>
+		  </footer>
+		  
+		</section>
+		
+		<script>
+			const clock = document.getElementById("clock");
+			const hour_text = [
+				[0, "letters"],
+				[1, "rivers"],
+				[2, "pasts"],
+				[3, "leaves"],
+				[4, "shadows"],
+				[5, "thoughts"],
+				[6, "noises"],
+				[7, "figures"],
+				[8, "eight"],
+				[9, "memories"],
+				[10, "pages"],
+				[11, "cars"],
+				[12, "symbols"],
+				[13, "trees"],
+				[14, "maps"],
+				[15, "insects"],
+				[16, "colors"],
+				[17, "books"],
+				[18, "images"],
+				[19, "futures"],
+				[20, "lines"],
+				[21, "signals"],
+				[22, "doors"],
+				[23, "waves"]
+			];
+			
+			const seconds_text = [
+				[0, "see"],
+				[1, "know"],
+				[2, "believe"],
+				[3, "hide"],
+				[4, "shape"],
+				[5, "admire"],
+				[6, "soothe"],
+				[7, "afflict"],
+				[8, "cherish"],
+				[9, "mourn"],
+				[10, "terrify"],
+				[11, "resent"],
+				[12, "delight"],
+				[13, "sense"],
+				[14, "imagine"],
+				[15, "covet"],
+				[16, "purify"],
+				[17, "compress"],
+				[18, "disturb"],
+				[19, "occlude"],
+				[20, "reveal"],
+				[21, "inhale"],
+				[22, "burn"],
+				[23, "change"],
+				[24, "relay"],
+				[25, "discern"],
+				[26, "fold"],
+				[27, "bury"],
+				[28, "kindle"],
+				[29, "macerate"],
+				[30, "diffuse"],
+				[31, "discover"],
+				[32, "incubate"],
+				[33, "notice"],
+				[34, "contradict"],
+				[35, "drink"],
+				[36, "witness"],
+				[37, "bend"],
+				[38, "ossify"],
+				[39, "confuse"],
+				[40, "hear"],
+				[41, "forgive"],
+				[42, "show"],
+				[43, "beget"],
+				[44, "breathe"],
+				[45, "welcome"],
+				[46, "transform"],
+				[47, "wash"],
+				[48, "examine"],
+				[49, "collect"],
+				[50, "fortify"],
+				[51, "savor"],
+				[52, "enrobe"],
+				[53, "understand"],
+				[54, "knead"],
+				[55, "resonate"],
+				[56, "disperse"],
+				[57, "consecrate"],
+				[58, "frighten"],
+				[59, "idolize"]
+			];
+			
+			
+			const min_text = [
+				[0, "connection"],
+				[1, "growth"],
+				[2, "splendor"],
+				[3, "grief"],
+				[4, "faith"],
+				[5, "fear"],
+				[6, "capacity"],
+				[7, "anger"],
+				[8, "reality"],
+				[9, "futility"],
+				[10, "rhetoric"],
+				[11, "lucidity"],
+				[12, "light"],
+				[13, "water"],
+				[14, "loss"],
+				[15, "information"],
+				[16, "fate"],
+				[17, "wind"],
+				[18, "possibility"],
+				[19, "fragility"],
+				[20, "mysticism"],
+				[21, "emergence"],
+				[22, "meaning"],
+				[23, "beauty"],
+				[24, "time"],
+				[25, "curiosity"],
+				[26, "dispair"],
+				[27, "ineffability"],
+				[28, "patience"],
+				[29, "abstraction"],
+				[30, "me"],
+				[31, "rain"],
+				[32, "joy"],
+				[33, "oblivion"],
+				[34, "movement"],
+				[35, "whimsy"],
+				[36, "tradition"],
+				[37, "obscurity"],
+				[38, "ideology"],
+				[39, "language"],
+				[40, "flight"],
+				[41, "injury"],
+				[42, "silence"],
+				[43, "logic"],
+				[44, "humility"],
+				[45, "pride"],
+				[46, "chaos"],
+				[47, "regret"],
+				[48, "utility"],
+				[49, "liturgy"],
+				[50, "decay"],
+				[51, "isolation"],
+				[52, "expression"],
+				[53, "absurdity"],
+				[54, "wonder"],
+				[55, "permanence"],
+				[56, "humor"],
+				[57, "rancor"],
+				[58, "passion"],
+				[59, "amity"]
+			];
+			
+			var row_index_sec = 0;
+			var cell_index_sec = 0;	
+			
+			var row_index_hour = 0;
+			var cell_index_hour = 0;	
+			
+			var row_index_min = 0;
+			var cell_index_min = 0;	
+			
+			function getRandomInt(min, max) {
+			    min = Math.ceil(min);
+			    max = Math.floor(max);
+			    return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			
+			function setClock(){
+				const date = new Date;
+				var seconds = date.getSeconds();
+				var hours = date.getHours();
+				var minutes = date.getMinutes();
+				
+				var prev_row_sec = row_index_sec;
+				var prev_cell_sec = cell_index_sec;
+				
+				var prev_row_hour = row_index_hour;
+				var prev_cell_hour = cell_index_hour;
+				
+				var prev_row_min = row_index_min;
+				var prev_cell_min = cell_index_min;
+				
+				var rand_row_sec = getRandomInt(2, 3);
+				var rand_cell_sec = getRandomInt(0, 9);
+				
+				var rand_row_hour = getRandomInt(0, 1);
+				var rand_cell_hour = getRandomInt(0, 9);
+				
+				var rand_row_min = getRandomInt(4, 5);
+				var rand_cell_min = getRandomInt(0, 9);
+				
+				for (let i = 0; i < seconds_text.length; i++){
+
+					if (seconds == seconds_text[i][0]){
+						clock.rows[rand_row_sec].cells[rand_cell_sec].textContent = seconds_text[i][1];
+						clock.rows[prev_row_sec].cells[prev_cell_sec].textContent = " ";
+						
+						row_index_sec = rand_row_sec;
+						cell_index_sec = rand_cell_sec;
+					};
+
+				};
+				
+				for (let i = 0; i < min_text.length; i++){
+
+					if (minutes == min_text[i][0]){
+						clock.rows[rand_row_min].cells[rand_cell_min].textContent = min_text[i][1];
+						clock.rows[prev_row_min].cells[prev_cell_min].textContent = " ";
+						
+						row_index_min = rand_row_min;
+						cell_index_min = rand_cell_min;
+					};
+
+				};
+				
+				for (let i = 0; i < hour_text.length; i++){
+
+					console.log(hours);
+					
+					if (hours == hour_text[i][0]){
+						clock.rows[rand_row_hour].cells[rand_cell_hour].textContent = hour_text[i][1];
+						clock.rows[prev_row_hour].cells[prev_cell_hour].textContent = " ";
+						
+						row_index_hour = rand_row_hour;
+						cell_index_hour = rand_cell_hour;
+						
+						console.log(hour_text[i])
+					};
+
+				};
+			};
+			
+			setInterval(setClock, 1000);
+			
+		</script>
+		
+	</body>
+</html>

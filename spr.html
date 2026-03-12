@@ -1,0 +1,182 @@
+<html>
+	<head>
+		<title>Text Book - One Word at a</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<section class="layout">
+			
+		  <header>
+			  <h1><a href="index.html">Text Book </a></h1>
+		  </header>
+		  
+		  <nav>
+			  <ul>
+			    <li><a href="spr.html">pg. 1: one word at a</a>
+					<div class="hover-box">A serial/parallel reading of <i>Wind is Blowing</i> by Chika Sagawa. Use any of the arrow keys to move through the text.</div>
+				</li>
+			    <li><a href="clock.html">pg. 2: time</a>
+					<div class="hover-box">One second poems, presented according to the hours, minutes, and seconds of the current time.</div>
+				</li>
+				<li><a href="one.html">pg. 3: blackbirds</a>
+					<div class="hover-box">A hypertext presentation of <i>Thirteen Ways of Looking at a Blackbird</i> by Wallace Stevens. Follow the links to move through the text.</div>
+				</li>
+				<li><a href="type.html">pg. 4: type</a>
+					<div class="hover-box">Type any five letters to generate a five-word sentence. Press the 'Enter' key to clear the display.</div>
+				<li> 
+			  </ul>
+		  </nav>
+		  
+		  <div class="body_content">
+			<table id="display" style="width:100%; height: 100%;">
+				<tr>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+				</tr>
+				<tr>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+				</tr>
+				<tr>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+				</tr>
+				<tr>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+				</tr>
+				<tr>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+					<td style="width:20%; height:20%;"></td>
+				</tr>
+			</table>
+		  </div>
+		  
+		  <footer>
+			  <p>by<br>Matthew Kogan</p>
+		  </footer>
+		  
+		</section>
+		
+		<script>
+			
+		    var str_a = "Swaying_as_if_in_the_wake_of_ _A_gaily_laughing_procession_ _Through_the_dark_garden,_ _To_whom_do_these_trees_try_to_speak._ _ _ _ _"; // 26
+			var str_b = "Drying_out_my_daydreams_ _Like_a_distant_voice,_ _Invisible_footsteps_ _Trample_on_my_shadow_ _On_the_ice._ _ _ _ _ _ _ _ _ _"; // 21
+			var str_c = "Outside,_the_afternoon_ _Was_violently_extinguished._ _The_seagull_twisted_its_bill_ _To_gather_warm_words_ _From_the_swarms_of_waves,_ _And_escaped_into_the_lantern."; //30
+			var str_d = "The_people_wait_for_spring,_ _In_search_of_lost_time._ _They_wish_for_the_seagull_ _To_once_again_return_to_their_eyes._ _ _ _ _ _"; // 25
+			
+		    var words_a = str_a.split("_");
+			var words_b = str_b.split("_");
+			var words_c = str_c.split("_");
+			var words_d = str_d.split("_");
+		    
+			var word_index = 0;
+			
+		    var display = document.getElementById("display");
+
+			var display_a = display.rows[1].cells[1];
+			var display_b = display.rows[1].cells[3];
+			var display_c = display.rows[3].cells[1];
+			var display_d = display.rows[3].cells[3];
+
+			display_a.textContent = words_a[word_index];
+			display_b.textContent = words_b[word_index];
+			display_c.textContent = words_c[word_index];
+			display_d.textContent = words_d[word_index];
+			
+			display_a.style.color = "DarkSlateGray";
+			display_b.style.color = "CornflowerBlue";
+			display_c.style.color = "Tomato";
+			display_d.style.color = "ForestGreen";
+
+			const words_array = [words_a, words_b, words_c, words_d];
+			const display_array = [display_a, display_b, display_c, display_d];
+			const colors = ["DarkSlateGray", "CornflowerBlue", "Tomato", "ForestGreen"];
+				
+			var row_length = display.rows.length;
+			var cell_length = display.rows[0].cells.length;
+				
+			document.addEventListener("keydown", (event) => {
+				const arrowKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+				if (arrowKeys.includes(event.key)){
+					console.log(word_index);
+					
+					var next_word_index = (word_index + 1 + words_array[0].length) % words_array[0].length;
+					word_index = next_word_index;
+					
+					//console.log(next_word_index);
+				}
+			});
+			
+			for (let i = 0; i < display_array.length; i++){
+				
+				let row_index = display_array[i].parentNode.rowIndex;
+				let cell_index = display_array[i].cellIndex;
+				
+				    document.addEventListener("keydown", (event) => {
+					  if (event.key === 'ArrowLeft') {
+						  let new_cell_index = (cell_index - 1 + cell_length) % cell_length;
+						  let prev_cell_index = (new_cell_index + 1 + cell_length) % cell_length;
+						
+						  display.rows[row_index].cells[new_cell_index].textContent = words_array[i][word_index];
+						  display.rows[row_index].cells[new_cell_index].style.color = colors[i];
+						  display.rows[row_index].cells[prev_cell_index].textContent = " ";
+						
+						  cell_index = new_cell_index;
+				      } 
+				      if (event.key === 'ArrowRight') {
+						  let new_cell_index = (cell_index + 1 + cell_length) % cell_length;
+						  let prev_cell_index = (new_cell_index - 1 + cell_length) % cell_length;
+						  
+						  display.rows[row_index].cells[new_cell_index].textContent = words_array[i][word_index];
+						  display.rows[row_index].cells[new_cell_index].style.color = colors[i];
+						  display.rows[row_index].cells[prev_cell_index].textContent = " ";
+						  
+						  cell_index = new_cell_index;
+				      } 
+				      if (event.key === 'ArrowUp') {
+						  let new_row_index = (row_index - 1 + row_length) % row_length;
+						  let prev_row_index = (new_row_index + 1 + row_length) % row_length;
+						
+						  display.rows[new_row_index].cells[cell_index].textContent = words_array[i][word_index];
+						  display.rows[new_row_index].cells[cell_index].style.color = colors[i];
+						  display.rows[prev_row_index].cells[cell_index].textContent = " ";
+						  
+						  row_index = new_row_index;
+				      } 
+				      if (event.key === 'ArrowDown') {
+						  let new_row_index = (row_index + 1 + row_length) % row_length;
+						  let prev_row_index = (new_row_index - 1 + row_length) % row_length;
+						  
+						  display.rows[new_row_index].cells[cell_index].textContent = words_array[i][word_index];
+						  display.rows[new_row_index].cells[cell_index].style.color = colors[i];
+						  display.rows[prev_row_index].cells[cell_index].textContent = " ";
+						  
+						  row_index = new_row_index;
+				      } 
+			  
+				    });
+				
+				};
+			
+		  </script>
+		
+	</body>
+</html>
